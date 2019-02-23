@@ -1,0 +1,21 @@
+body {
+  background-color: #ad741f;
+  font-size: 18px;
+  color: #ff4326; }
+
+h1 {
+  font-size: 40px;
+  color: red; }
+  h1 span {
+    color: blue;
+    font-size: 20px; }
+
+.head {
+  width: 100%;
+  background-color: #ff9393; }
+  .head .menu {
+    background-color: #8bff91;
+    width: 400px; }
+    .head .menu #submemu li {
+      font-size: 20px;
+      color: #60ffff; }

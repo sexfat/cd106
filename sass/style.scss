@@ -1,0 +1,41 @@
+$fontbodysize: 18px;
+$fonth1size: 40px;
+$fontcolor: #ff4326;
+
+body {
+    background-color: rgb(173, 116, 31);
+    font-size: $fontbodysize;
+    color: $fontcolor;
+}
+
+h1 {
+    font-size: $fonth1size;
+    color: red;
+
+    span {
+        color: blue;
+        font-size: 20px;
+    }
+}
+
+.head {
+    width: 100%;
+    background-color: rgb(255, 147, 147);
+
+    .menu {
+        background-color: rgb(139, 255, 145);
+        width: 400px;
+
+        #submemu {
+            li {
+                font-size: 20px;
+                color: #60ffff
+            }
+        }
+
+    }
+
+
+
+
+}
