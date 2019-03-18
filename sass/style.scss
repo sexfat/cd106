@@ -50,9 +50,104 @@
 
 }
 
-.btn {
-@include btn(120px, 40px, #d3d3d3 );
-// @include btn();
+.btn-box {
+    @include btn(120px, 40px, #d3d3d3);
+    // @include btn();
 }
 
 
+
+@include btn-module('.btn-model', 180px, 40px, #d3d3d3);
+
+
+
+
+
+
+
+%border-radus {
+    border-radius: 20px;
+}
+
+@mixin broder-r() {
+
+    border-radius: 10px;
+}
+
+@mixin bg($color, $bgc, $border-c, $font:null) {
+    color: $color;
+    background-color: $bgc;
+    border-color: $border-c;
+    font-size: $font;
+    //  @extend .border-raduis ;
+}
+
+
+.box-extend {
+    @extend %border-radus;
+}
+
+
+
+$value: rgb(250, 250, 250),
+#28C76F,
+green;
+
+@mixin hover($color, $bgc) {
+    color: $color;
+    background-color: $bgc;
+    transition: all 0.15s ease-in-out;
+}
+
+@mixin btnall($className, $hovercolor, $hoverbgc) {
+    #{$className} {
+        width: 100px;
+        @include bg($value...);
+        @extend %border-radus;
+        text-align: center;
+        padding: 10px;
+
+        &:hover {
+            @include hover($hovercolor, $hoverbgc);
+            cursor: pointer;
+        }
+    }
+}
+
+
+@include btnall('.btn', #333, rgb(8, 245, 186));
+
+
+.opr {
+    width: 10px + 10 *20;
+    height: 30px - 10;
+    font: (20px / 2);
+}
+
+// font // h1 - h6
+
+@include bodysetting(14px);
+
+
+
+@mixin pushleft ($num) {
+    @for $i from 1 through $num {
+
+        .push-left-#{$i} {
+            margin-left: $i * 1px;
+        }
+    }
+}
+
+
+@include pushleft(10);
+
+
+$images : a1 , a2 ,a3 ,a4, a5 , a6;
+
+@each $img in $images {
+    .#{$img}-images {
+        background-image: url('images/#{$img}.jpg');
+        display: block;
+    }
+}

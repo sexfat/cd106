@@ -41,9 +41,45 @@
 
 
 
-@mixin btn( $width:100px , $height: 30px, $bgc:#c0c0c0 , $center:null) {
+@mixin btn($width:100px, $height: 30px, $bgc:#c0c0c0, $center:null) {
     width: $width;
     height: $height;
     background-color: $bgc;
     text-align: $center;
- }
+}
+
+
+@mixin btn-module($className, $width, $height, $bgc) {
+    #{$className} {
+        width: $width;
+        height: $height;
+        background-color: $bgc;
+    }
+}
+
+
+@mixin bodysetting ($fontSizes) {
+    body {
+        font-size: $fontSizes;
+
+        h1 {
+            font-size: $fontSizes * 4
+        }
+
+        h2 {
+            font-size: $fontSizes * 3.5
+        }
+
+        h3 {
+            font-size: $fontSizes * 2.8
+        }
+
+        h4 {
+            font-size: $fontSizes * 2
+        }
+
+        h5 {
+            font-size: $fontSizes * 1.4
+        }
+    }
+}

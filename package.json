@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/sexfat/cd106#readme",
   "dependencies": {
+    "bootstrap-sass": "^3.4.1",
     "browser-sync": "^2.26.3",
     "gulp": "^3.9.1",
     "gulp-sass": "^4.0.2",

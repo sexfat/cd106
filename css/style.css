@@ -44,7 +44,7 @@ table {
 
 .wrapper,
 .head {
-  width: 1024px;
+  width: 1366px;
   margin: 0 auto; }
 
 header {
@@ -55,12 +55,17 @@ header {
     background-color: #d8d8d8;
     display: inline-block;
     float: left; }
-  header .menu li {
-    display: inline-block;
-    width: 120px;
-    height: 30px;
-    float: left;
-    background-color: silver; }
+  header .menu {
+    position: relative;
+    top: 50px;
+    right: 20px; }
+    header .menu li {
+      display: inline-block;
+      width: 120px;
+      height: 30px;
+      float: right;
+      background-color: #ff5e00;
+      margin: 0 0 0 20px; }
   header .clearfix {
     clear: both; }
 
@@ -92,7 +97,100 @@ header {
   .header a:active {
     color: #666; }
 
-.btn {
+.btn-box {
   width: 120px;
   height: 40px;
   background-color: #d3d3d3; }
+
+.btn-model {
+  width: 180px;
+  height: 40px;
+  background-color: #d3d3d3; }
+
+.box-extend, .btn {
+  border-radius: 20px; }
+
+.btn {
+  width: 100px;
+  color: #fafafa;
+  background-color: #28C76F;
+  border-color: green;
+  text-align: center;
+  padding: 10px; }
+  .btn:hover {
+    color: #333;
+    background-color: #08f5ba;
+    transition: all 0.15s ease-in-out;
+    cursor: pointer; }
+
+.opr {
+  width: 210px;
+  height: 20px;
+  font: 10px; }
+
+body {
+  font-size: 14px; }
+  body h1 {
+    font-size: 56px; }
+  body h2 {
+    font-size: 49px; }
+  body h3 {
+    font-size: 39.2px; }
+  body h4 {
+    font-size: 28px; }
+  body h5 {
+    font-size: 19.6px; }
+
+.push-left-1 {
+  margin-left: 1px; }
+
+.push-left-2 {
+  margin-left: 2px; }
+
+.push-left-3 {
+  margin-left: 3px; }
+
+.push-left-4 {
+  margin-left: 4px; }
+
+.push-left-5 {
+  margin-left: 5px; }
+
+.push-left-6 {
+  margin-left: 6px; }
+
+.push-left-7 {
+  margin-left: 7px; }
+
+.push-left-8 {
+  margin-left: 8px; }
+
+.push-left-9 {
+  margin-left: 9px; }
+
+.push-left-10 {
+  margin-left: 10px; }
+
+.a1-images {
+  background-image: url("images/a1.jpg");
+  display: block; }
+
+.a2-images {
+  background-image: url("images/a2.jpg");
+  display: block; }
+
+.a3-images {
+  background-image: url("images/a3.jpg");
+  display: block; }
+
+.a4-images {
+  background-image: url("images/a4.jpg");
+  display: block; }
+
+.a5-images {
+  background-image: url("images/a5.jpg");
+  display: block; }
+
+.a6-images {
+  background-image: url("images/a6.jpg");
+  display: block; }
