@@ -1,6 +1,7 @@
 @import url(reset.css);
+@import url(font.css);
 body {
-  background-color: #ad741f;
+  background-color: #dddddd;
   font-size: 10px;
   color: #fe4225; }
 

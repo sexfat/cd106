@@ -1,8 +1,10 @@
 @import 'var';
 @import  'reset.css'; 
+@import  'font.css'; 
+@import 'layout/header';
 
 body {
-    background-color: rgb(173, 116, 31);
+    background-color: rgb(221, 221, 221);
     font-size: $fontbodysize;
     color: $fontcolor;
 }
