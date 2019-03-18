@@ -1,6 +1,5 @@
-$fontbodysize: 18px;
-$fonth1size: 40px;
-$fontcolor: #ff4326;
+@import 'var';
+@import  'reset.css'; 
 
 body {
     background-color: rgb(173, 116, 31);
@@ -32,10 +31,12 @@ h1 {
                 color: #60ffff
             }
         }
-
     }
-
-
-
-
 }
+
+
+.box {
+  max-width: $null;
+}
+
+
