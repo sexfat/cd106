@@ -1,44 +1,58 @@
-@import 'var';
-@import  'reset.css'; 
-@import  'font.css'; 
+//===============
+// 基本參數
+//===============
+@import 'base/var';
+@import 'base/reset';
+@import 'base/common';
+
+
+//===============
+// 函式
+//===============
+@import 'mixin/mixin';
+
+
+//===============
+// 頁面組成元素
+//===============
 @import 'layout/header';
+@import 'layout/footer';
 
-body {
-    background-color: rgb(221, 221, 221);
-    font-size: $fontbodysize;
-    color: $fontcolor;
-}
 
-h1 {
-    font-size: $fonth1size;
-    color: red;
+//===============
+// 頁面
+//===============
+@import 'page/index';
+@import 'page/login';
+@import 'page/content';
 
-    span {
-        color: blue;
-        font-size: 20px;
-    }
-}
 
-.head {
-    width: 100%;
-    background-color: rgb(255, 147, 147);
 
-    .menu {
-        background-color: rgb(139, 255, 145);
-        width: 400px;
 
-        #submemu {
-            li {
-                font-size: 20px;
-                color: #60ffff
-            }
-        }
-    }
+
+
+.boxmargin {
+    @include margin();
 }
 
 
-.box {
-  max-width: $null;
+.box01margin {
+    @include margin();
+}
+
+.box02margin {
+    @include marginvalue(960px);
+}
+
+
+.header {
+    @include link (#333, #999, #1553ff, #666);
+
+}
+
+.btn {
+@include btn(120px, 40px, #d3d3d3 );
+// @include btn();
 }
 
 

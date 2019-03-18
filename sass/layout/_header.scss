@@ -1,3 +1,22 @@
 header {
-
+    background-color: rgb(142, 208, 252);
+     .logo {
+         width: 150px;
+         height: 80px;
+         background-color: rgb(216, 216, 216);
+         display: inline-block;
+         float: left;
+     }
+     .menu {
+         li {
+             display: inline-block;
+             width: 120px;
+             height:30px;
+             float: left;
+             background-color: rgb(192, 192, 192);
+         }
+     }
+     .clearfix {
+         clear: both;
+     }
 }

@@ -1,26 +1,98 @@
-@import url(reset.css);
-@import url(font.css);
+@charset "UTF-8";
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
 body {
-  background-color: #dddddd;
-  font-size: 10px;
-  color: #fe4225; }
+  line-height: 1; }
 
-h1 {
-  font-size: 48px;
-  color: red; }
-  h1 span {
-    color: blue;
-    font-size: 20px; }
+ol, ul {
+  list-style: none; }
 
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+.wrapper,
 .head {
-  width: 100%;
-  background-color: #ff9393; }
-  .head .menu {
-    background-color: #8bff91;
-    width: 400px; }
-    .head .menu #submemu li {
-      font-size: 20px;
-      color: #60ffff; }
+  width: 1024px;
+  margin: 0 auto; }
 
-.box {
-  max-width: 0; }
+header {
+  background-color: #8ed0fc; }
+  header .logo {
+    width: 150px;
+    height: 80px;
+    background-color: #d8d8d8;
+    display: inline-block;
+    float: left; }
+  header .menu li {
+    display: inline-block;
+    width: 120px;
+    height: 30px;
+    float: left;
+    background-color: silver; }
+  header .clearfix {
+    clear: both; }
+
+.boxmargin {
+  margin-left: auto;
+  margin-right: auto; }
+
+.box01margin {
+  margin-left: auto;
+  margin-right: auto; }
+
+.box02margin {
+  width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0;
+  background-color: #bfffa6; }
+
+.header a {
+  /* 已連結過 */
+  /* 已連結過 */
+  /* 選擇的連結 */ }
+  .header a:link {
+    color: #333; }
+  .header a:visited {
+    color: #999; }
+  .header a:visited {
+    color: #999; }
+  .header a:active {
+    color: #666; }
+
+.btn {
+  width: 120px;
+  height: 40px;
+  background-color: #d3d3d3; }

@@ -1,0 +1,49 @@
+@mixin margin() {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+@mixin marginvalue($width) {
+    width: $width;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+    background-color: rgb(191, 255, 166);
+}
+
+
+@mixin link($l, $v, $h, $a) {
+
+    a {
+
+        &:link {
+            color: $l;
+        }
+
+        /* 已連結過 */
+        &:visited {
+            color: $v;
+        }
+
+        /* 已連結過 */
+        &:visited {
+            color: $v;
+        }
+
+        /* 選擇的連結 */
+        &:active {
+            color: $a;
+        }
+    }
+
+}
+
+
+
+@mixin btn( $width:100px , $height: 30px, $bgc:#c0c0c0 , $center:null) {
+    width: $width;
+    height: $height;
+    background-color: $bgc;
+    text-align: $center;
+ }
