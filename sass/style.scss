@@ -17,6 +17,8 @@
 //===============
 @import 'layout/header';
 @import 'layout/footer';
+@import 'layout/mobile';
+@import 'layout/desktop';
 
 
 //===============
@@ -58,11 +60,6 @@
 
 
 @include btn-module('.btn-model', 180px, 40px, #d3d3d3);
-
-
-
-
-
 
 
 %border-radus {
@@ -140,10 +137,16 @@ green;
 }
 
 
-@include pushleft(10);
+@include pushleft(6);
 
 
-$images : a1 , a2 ,a3 ,a4, a5 , a6 , b3;
+$images : a1,
+a2,
+a3,
+a4,
+a5,
+a6,
+b3;
 
 @each $img in $images {
     .#{$img}-images {
@@ -152,3 +155,142 @@ $images : a1 , a2 ,a3 ,a4, a5 , a6 , b3;
     }
 }
 
+
+
+// whlie 迴圈
+
+$x : 1;
+
+@while $x < 10 {
+    .col-#{$x} {
+        width: 1px * $x;
+    }
+
+    $x : $x+1;
+}
+
+
+
+$alt : alert,
+red,
+yellow;
+$sub : submit,
+#fff,
+green;
+$back : back,
+blue,
+#00e070;
+$clear : clears,
+#848d84,
+#ffcc25;
+
+
+@each $className,
+$text,
+$back in $alt,
+$sub,
+$back,
+$clear {
+
+    .#{$className}-btn {
+        color: $text;
+        background-color: $back;
+    }
+}
+
+
+@each $title_font,
+$size in (h1 : 48px, h2 : 46px, h3 : 30px, h4: 26px, h5: 14px) {
+    #{$title_font} {
+        font-size: $size;
+
+    }
+}
+
+@mixin grid($num) {
+
+    @for $i from 1 through $num {
+        .col-md-#{$i} {
+            width: ($i / $num) * 100%
+        }
+    }
+}
+
+@include grid(16);
+
+
+
+$num : 10px;
+
+h2 {
+    @if $num <=20px {
+        padding-top: $num
+    }
+
+    @else {
+        padding-top: ($num /2);
+    }
+}
+
+
+
+
+@mixin theme($classname, $theme) {
+    .#{$classname} {
+        @if ($theme==maintheme) {
+            background-color: #fff;
+            @content;
+
+
+        }
+
+        @else if ($theme==subtheme) {
+            background-color: rgb(255, 88, 88);
+            @content;
+
+        }
+
+        @else if ($theme==sidebar) {
+            background-color: #3cf8f8;
+            @content;
+        }
+
+    }
+}
+
+@include theme(sub, maintheme) {
+    padding: 10px;
+    margin: 10px;
+    font-size: 20px;
+};
+
+
+
+
+
+
+@include respond(medium) {
+
+   h2 {
+          font-size:  20px;
+   }
+}
+
+
+
+
+@mixin boxs ($num){
+   margin: $num
+}
+
+
+
+@mixin rew($num){
+   .boss {
+     width: $num;
+     @include boxs($num);
+   }
+}
+
+
+@include rew(10px);

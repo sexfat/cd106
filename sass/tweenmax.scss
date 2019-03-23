@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.section {
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+
+
+
+.box {
+    width: 300px;
+    height: 50px;
+    position: relative;
+    background-color: rgb(80, 255, 188);
+    margin-bottom: 10px;
+    // box-shadow: 0px 0px 10px rgb(124, 124, 124);
+}
+
+.section_01 {
+    background-color: rgb(97, 184, 255);
+    .box_02{
+     background-color: rgb(247, 23, 23);
+    }
+
+}
