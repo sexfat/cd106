@@ -120,64 +120,100 @@ var animation_01 = TweenMax.to('.box_13', 1, {
 
 
 var section_01 = new ScrollMagic.Scene({
-    triggerElement: "#trigger_01",
+        triggerElement: "#trigger_01",
 
-}).setTween(animation_01)
-.addIndicators()
-.addTo(controller)
+    }).setTween(animation_01)
+    .addIndicators()
+    .addTo(controller)
 
 
 
 //第二段動畫
-var animation_02 = TweenMax.staggerFromTo('.item', 1 , {
+var animation_02 = TweenMax.staggerFromTo('.item', 1, {
     y: 0,
     alpha: 0
-},{
+}, {
     y: 30,
     alpha: 1
-},.2)
+}, .2)
 
 //觸發事件
 
 var section_02 = new ScrollMagic.Scene({
-    triggerElement: "#trigger_02",
-    reverse: true,
-    offset: 0,
-    // triggerHook: 0
+        triggerElement: "#trigger_02",
+        reverse: true,
+        offset: 0,
+        // triggerHook: 0
 
-}).setTween(animation_02)
-.addIndicators()
-.addTo(controller)
+    }).setTween(animation_02)
+    .addIndicators()
+    .addTo(controller)
 
 // 觸發事件
 
+var animation_03 = TweenMax.to('.box_select', 1, {
+    x: 100
+});
+var animation_04 = TweenMax.to('.box_select2', 1, {
+    y: 400,
+    x: 10
+});
+
 var section_03 = new ScrollMagic.Scene({
-    triggerElement: "#trigger_03",
-    // reverse: true,
-    // offset: 0,
-    // triggerHook: 0
+        triggerElement: "#trigger_03",
+        duration: 400
+        // reverse: true,
+        // offset: 0,
+        // triggerHook: 0
 
-}).setClassToggle('.box_select' , 'select')
-.addIndicators()
-.addTo(controller)
+    }).setClassToggle('.box_select', 'select')
+    .setTween(animation_03)
+    .addIndicators()
+    .addTo(controller)
+
+///pin
+    var tlts = new TimelineMax();
+
+    tlts.add(TweenMax.to('.scrollbox_01', 1, {
+        x: 200,
+    }));
+    tlts.add(TweenMax.to('.scrollbox_02', 1, {
+        x: 300,
+    }));
+    tlts.add(TweenMax.to('.scrollbox_03', 1, {
+        x: 400,
+    }));
 
 
+    var scene_s = new ScrollMagic.Scene({
+        triggerElement: "#trigger_05",
+        duration: '300%',
+        //畫面最上緣
+        triggerHook: 0,
+        //只出現一次
+        // reverse: false,
+    })
+    .setPin('.section_08')
+    .setTween(tlts)
+    .addIndicators()
+    .addTo(controller);
 
+//pin end
 
 
 
 
 
 var section_04 = new ScrollMagic.Scene({
-    triggerElement: "#trigger_04",
-    // duration: '80%',
-    // offset: 40,
-    reverse: false,
-    triggerHook: 0
-}).setClassToggle('.bgall' ,'on')//選取器 選取物件  
-.addIndicators({
-    name: 'section02'
-}).addTo(controller)
+        triggerElement: "#trigger_04",
+        // duration: '80%',
+        // offset: 40,
+        reverse: false,
+        triggerHook: 0
+    }).setClassToggle('.bgall', 'on') //選取器 選取物件  
+    .addIndicators({
+        name: 'section02'
+    }).addTo(controller)
 
 
 
