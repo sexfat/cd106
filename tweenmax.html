@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,8 +8,12 @@
     <link rel="stylesheet" href="css/tweenmax.css">
     <script src="js/parallax.js"></script>
     <script src="node_modules/gsap/src/minified/TweenMax.min.js"></script>
+    <script src="node_modules/scrollmagic/scrollmagic/minified/ScrollMagic.min.js"></script>
+    <script src="node_modules/scrollmagic/scrollmagic/minified/plugins/debug.addIndicators.min.js"></script>
+    <script src="node_modules/scrollmagic/scrollmagic/minified/plugins/animation.gsap.min.js"></script>
     <title>Tweenmax</title>
 </head>
+
 <body>
     <div class="section section_01">
         <h2>第一個場景</h2>
@@ -21,25 +26,65 @@
         <div id="btn_play">play</div>
         <div id="btn_stop">stop</div>
         <h2 class="title">Timelinemax</h2>
-    <div class="box box_06">06</div> <div class="box box_07"></div>
+        <div class="box box_06">06</div>
+        <div class="box box_07"></div>
 
-    <div class="box box_08"></div>
+        <div class="box box_08"></div>
 
-        
+
     </div>
     <div id="parallax_box" class="section section_03" data-hover-only="true">
-     <div class="box box_09" data-depth="0.5"></div>
-     <div class="box box_10" data-depth="0.1"></div>
-     <div class="box box_11" data-depth="0.6"></div>
-     <div class="box box_12" data-depth="0.2"></div>
+        <div class="box box_09" data-depth="0.5"></div>
+        <div class="box box_10" data-depth="0.1"></div>
+        <div class="box box_11" data-depth="0.6"></div>
+        <div class="box box_12" data-depth="0.2"></div>
+        <!-- <div class="box box_12" data-depth="0.8"></div> -->
 
 
     </div>
-    <div class="section section_04"></div>
+    <div id="trigger_01"></div>
+    <div class="section section_04">
+        <div class="box_13 box center">13</div>
+    </div>
+    <div id="trigger_02"></div>
+    <div class="section section_05">
+        <div class="item">
+            <h2>001</h2>
+            <div class="text_box">
+                Beautiful cinematic designs optimized for all screen sizes and types. Compatible with Retina high pixel
+                density displays.
+            </div>
+        </div>
+        <div class="item">
+            <h2>002</h2>
+            <div class="text_box">
+                Beautiful cinematic designs optimized for all screen sizes and types. Compatible with Retina high pixel
+                density displays.
+            </div>
+        </div>
+        <div class="item">
+            <h2>003</h2>
+            <div class="text_box">
+                Beautiful cinematic designs optimized for all screen sizes and types. Compatible with Retina high pixel
+                density displays.
+            </div>
+        </div>
+    </div>
+    <div id="trigger_03"></div>
+    <div class="section section_06">
+        <div class="box box_select"></div>
+    </div>
+    <div id="trigger_04"></div>
+    <div class="section section_07">
+        <div class="bgall"></div>
+
+    </div>
+    <div class="section section_08"></div>
 
 
-    
 
-   <script src="js/tweenmax.js"></script> 
+
+    <script src="js/tweenmax.js"></script>
 </body>
+
 </html>
