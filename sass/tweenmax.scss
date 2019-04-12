@@ -28,3 +28,32 @@
     }
 
 }
+
+
+.section_02 {
+    
+
+}
+
+%methoe {
+    width: 100px;
+    height: 30px;
+    background-color: rgb(115, 140, 253);
+    margin-top:10px; 
+    cursor: pointer;
+}
+
+#btn_play {
+ @extend %methoe;
+}
+
+
+#btn_stop {
+  @extend %methoe;
+}
+
+
+
+.title {
+ text-align: center;
+}

@@ -38,3 +38,43 @@ TweenMax.to('.box_01', 1.4, {
 //     ease: Power0.easeNone,
 
 // });
+
+var tl = new TimelineMax({
+    //方法
+   repeat: 1,
+   yoyo: true,
+   repeatDelay: 1
+});
+
+var tl_01 = TweenMax.to('.box_06' , 1 ,{ x: 100});
+var tl_02  =  TweenMax.to('.box_07' , 1 ,{ y: 100});
+var tl_03  =  TweenMax.to('.box_08' , 1 ,{ y: 100 , x: 100});
+
+tl.add(tl_01).add(tl_02).add(tl_03);
+
+
+
+// tl.to('.box_06' , 1 ,{ x: 100})
+// .to('.box_07' , 1 ,{ y: 100})
+// .to('.box_08' , 1 ,{ y: 100 , x: 100});
+
+tl.stop();
+
+
+document.getElementById('btn_play').onclick = function () {
+    tl.play();
+}
+
+
+document.getElementById('btn_stop').onclick = function () {
+    tl.stop();
+}
+
+
+
+
+
+
+
+
+console.log('end');
