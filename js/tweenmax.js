@@ -39,30 +39,44 @@ TweenMax.to('.box_01', 1.4, {
 
 // });
 
+
+
+
+TweenMax.set('.box_06' , {x: 50 });
+TweenMax.set('.box_07' , {x: 150 });
+
+
+
+
+function alerts() {
+    alert();
+}
+
+
 var tl = new TimelineMax({
     //方法
    repeat: 1,
    yoyo: true,
-   repeatDelay: 1
+   onComplete: alerts
 });
 
-var tl_01 = TweenMax.to('.box_06' , 1 ,{ x: 100});
-var tl_02  =  TweenMax.to('.box_07' , 1 ,{ y: 100});
-var tl_03  =  TweenMax.to('.box_08' , 1 ,{ y: 100 , x: 100});
+// var tl_01 = TweenMax.to('.box_06' , 1 ,{ x: 100});
+// var tl_02  =  TweenMax.to('.box_07' , 1 ,{ y: 100});
+// var tl_03  =  TweenMax.to('.box_08' , 1 ,{ y: 100 , x: 100});
 
-tl.add(tl_01).add(tl_02).add(tl_03);
+// tl.add(tl_01).add(tl_02).add(tl_03);
 
 
 
-// tl.to('.box_06' , 1 ,{ x: 100})
-// .to('.box_07' , 1 ,{ y: 100})
-// .to('.box_08' , 1 ,{ y: 100 , x: 100});
+tl.to('.box_06' , 1 ,{ x: 200})
+.to('.box_07' , 1 ,{ y: 100})
+.to('.box_08' , 1 ,{ y: 100 , x: 100});
 
 tl.stop();
 
 
 document.getElementById('btn_play').onclick = function () {
-    tl.play();
+    tl.play(0);
 }
 
 
@@ -70,6 +84,15 @@ document.getElementById('btn_stop').onclick = function () {
     tl.stop();
 }
 
+
+
+function parallaxs() {
+    var scene = document.getElementById('parallax_box');
+    var parallax = new Parallax(scene);
+};
+
+
+parallaxs();
 
 
 
